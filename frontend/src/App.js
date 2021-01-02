@@ -1,9 +1,11 @@
 import './App.css';
 
-function App() {
+const App = () => {
   return (
 
-    <h1>Welcome to Octo Purch 🛒</h1>
+    <>
+      <h1>Welcome to Octo Purch 🛒</h1>
+    </>
 
   );
 }

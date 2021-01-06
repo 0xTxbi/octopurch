@@ -1,0 +1,25 @@
+{
+  "name": "octopurch",
+  "version": "1.0.0",
+  "description": "A ReactJS eCommerce app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechieJossy/octopurch.git"
+  },
+  "keywords": [
+    "eCommerce"
+  ],
+  "author": "Joseph David",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TechieJossy/octopurch/issues"
+  },
+  "homepage": "https://github.com/TechieJossy/octopurch#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

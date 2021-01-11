@@ -11,7 +11,7 @@ const users = [
 		name: 'Rachel James',
 		email: 'rachjames@octopurch.com',
 		password: bcrypt.hashSync('0000', 10),
-	}
+	},
 	{
 		name: 'Jeremy James',
 		email: 'jerjames@octopurch.com',

@@ -79,4 +79,4 @@ const products = [
   },
 ]
 
-expo
+export default products

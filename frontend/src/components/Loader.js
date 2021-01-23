@@ -6,7 +6,7 @@ const Loader = () => {
 
 		<Spinner animation='grow' role='status' style={{ width: '100px', height: '100px', margin: 'auto', display: 'block' }}>
 
-			<span class="sr-only">Loading...</span>
+			<span className="sr-only">Loading...</span>
 
 		</Spinner>
 

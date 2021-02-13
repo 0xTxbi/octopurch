@@ -9,12 +9,12 @@ const PlaceOrderScreen = () => {
 
 	const cart = useSelector(state => state.cart)
 
-	// Round to 2 decimal places
+	// Round arguments to 2 d.p
 	const addDecimals = (num) => {
 		return (Math.round(num * 100) / 100).toFixed(2)
 	}
 
-	// Calculate Prices
+	// Compute prices
 	cart.itemsPrice = addDecimals(cart.cartItems.reduce((acc, currItem) => acc + currItem.price * currItem.quantity, 0))
 
 	cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100)
@@ -25,6 +25,7 @@ const PlaceOrderScreen = () => {
 
 	const placeOrderHandler = () => {
 
+		// For debugging purposes
 		console.log('Place Order')
 
 	}

@@ -25,7 +25,6 @@ export const createOrder = (order) => async (dispatch, getState) => {
 			payload: data
 		})
 
-		// localStorage.setItem('orderedItems', JSON.stringify(data))
 
 	} catch (error) {
 
@@ -54,14 +53,12 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 			}
 		}
 
-		const { data } = await axios.post(`/api/orders/${id}`, config)
+		const { data } = await axios.get(`/api/orders/${id}`, config)
 
 		dispatch({
 			type: ORDER_DETAILS_SUCCESS,
 			payload: data
 		})
-
-		// localStorage.setItem('orderedItems', JSON.stringify(data))
 
 	} catch (error) {
 

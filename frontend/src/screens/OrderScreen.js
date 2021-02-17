@@ -13,8 +13,11 @@ const OrderScreen = ({ match }) => {
 	const dispatch = useDispatch()
 
 
+	console.log(useSelector(state => state.orderDetails))
 	const orderDetails = useSelector(state => state.orderDetails)
 	const { order, loading, error } = orderDetails
+
+	console.log(orderDetails)
 
 	if (!loading) {
 

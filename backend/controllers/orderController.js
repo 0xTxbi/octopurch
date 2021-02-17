@@ -27,9 +27,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
 			totalPrice
 		})
 
-		const createOrder = await order.save()
+		const createdOrder = await order.save()
 
-		res.status(201).json(createOrder)
+		res.status(201).json(createdOrder)
 
 	}
 

@@ -10,7 +10,7 @@ const PlaceOrderScreen = ({ history }) => {
 
 	const dispatch = useDispatch()
 
-	const cart = useSelector(state => state.cart)
+	const cart = useSelector((state) => state.cart)
 
 	// Round arguments to 2 d.p
 	const addDecimals = (num) => {
@@ -26,10 +26,8 @@ const PlaceOrderScreen = ({ history }) => {
 
 	cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2)
 
-	const orderCreate = useSelector(state => state.orderCreate)
+	const orderCreate = useSelector((state) => state.orderCreate)
 	const { order, success, error } = orderCreate
-
-	console.log(success)
 
 	useEffect(() => {
 

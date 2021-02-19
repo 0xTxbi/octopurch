@@ -12,33 +12,25 @@ const OrderScreen = ({ match }) => {
 
 	const dispatch = useDispatch()
 
-
-	console.log(useSelector(state => state.orderDetails))
-	const orderDetails = useSelector(state => state.orderDetails)
+	const orderDetails = useSelector((state) => state.orderDetails)
 	const { order, loading, error } = orderDetails
 
-	console.log(orderDetails)
-
 	if (!loading) {
-
-
-		// Round arguments to 2 d.p
+		//   Calculate prices
 		const addDecimals = (num) => {
 			return (Math.round(num * 100) / 100).toFixed(2)
 		}
 
-		// Compute order price
-		order.itemsPrice = addDecimals(order.orderItems.reduce((acc, currItem) => acc + currItem.price * currItem.quantity, 0))
-
+		order.itemsPrice = addDecimals(
+			order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
+		)
 	}
 
 	useEffect(() => {
 
-		if (!order || order._id !== orderId) {
-			dispatch(getOrderDetails(orderId))
-		}
+		dispatch(getOrderDetails(orderId))
 
-	}, [dispatch, order, orderId])
+	}, [])
 
 
 
